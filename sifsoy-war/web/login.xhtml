@@ -20,12 +20,12 @@
                     <h:panelGrid columns="2">
                         
                         <h:outputLabel value="Usuario" for="usuario" />
-                        <h:inputText value="#{LoginBean.currentUser.usuario}" id="usuario" required="required" requiredMessage="Ingrese su nombre de usuario" />
+                        <h:inputText value="#{loginBean.currentUser.usuario}" id="usuario" required="required" requiredMessage="Ingrese su nombre de usuario" />
                         
                         <h:outputLabel value="Contraseña" for="password" />
-                        <h:inputSecret value="#{LoginBean.currentUser.password}" id="password" required="required" requiredMessage="Ingrese su contraseña" />
+                        <h:inputSecret value="#{loginBean.currentUser.password}" id="password" required="required" requiredMessage="Ingrese su contraseña" />
                         
-                        <h:commandButton value="Ingresar" action="#{LoginBean.validarUsuario}" />
+                        <h:commandButton value="Ingresar" action="#{loginBean.validarUsuario()}" />
                     </h:panelGrid>
                 </h:form>
             </ace:panel>

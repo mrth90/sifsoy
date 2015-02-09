@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
  *
  * @author Martha
  */
+
 public class LoginBean {
     
     private static Logger logger = Logger.getLogger(LoginBean.class);
