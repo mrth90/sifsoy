@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:icecore="http://www.icefaces.org/icefaces/core"
+      xmlns:ace="http://www.icefaces.org/icefaces/components"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      >
+    <h:head>
+        <title>Iniciar Sesi&oacute;n</title>
+        <ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+    </h:head>
+    <h:body>
+        <h:form id="iceForm">
+            <ace:panel header="Iniciar Sesion">
+                <h:form>
+                    <h:messages></h:messages>
+                    <h:panelGrid columns="2">
+                        
+                        <h:outputLabel value="Usuario" for="usuario" />
+                        <h:inputText value="#{LoginBean.currentUser.usuario}" id="usuario" required="required" requiredMessage="Ingrese su nombre de usuario" />
+                        
+                        <h:outputLabel value="Contraseña" for="password" />
+                        <h:inputSecret value="#{LoginBean.currentUser.password}" id="password" required="required" requiredMessage="Ingrese su contraseña" />
+                        
+                        <h:commandButton value="Ingresar" action="#{LoginBean.validarUsuario}" />
+                    </h:panelGrid>
+                </h:form>
+            </ace:panel>
+        </h:form>
+    </h:body>
+</html>
