@@ -12,4 +12,10 @@
         <managed-bean-class>Beans.LoginBean</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>tableBean</managed-bean-name>
+        <managed-bean-class>Beans.TableBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
 </faces-config>
