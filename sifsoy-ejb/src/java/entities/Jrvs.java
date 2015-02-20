@@ -31,6 +31,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Jrvs.findAll", query = "SELECT j FROM Jrvs j"),
     @NamedQuery(name = "Jrvs.findByIdjrv", query = "SELECT j FROM Jrvs j WHERE j.idjrv = :idjrv"),
+    @NamedQuery(name = "Jrvs.findByIdSector", query = "SELECT j FROM Jrvs j WHERE j.idsectorelectoral = :idsectorelectoral"),
     @NamedQuery(name = "Jrvs.findByJrv", query = "SELECT j FROM Jrvs j WHERE j.jrv = :jrv")})
 public class Jrvs implements Serializable {
     private static final long serialVersionUID = 1L;

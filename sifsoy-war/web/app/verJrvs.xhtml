@@ -19,26 +19,22 @@
                 }
             </style>
             <h:panelGrid columns="6"> 
-                <ace:dataTable id="sectoresTable"
-                               value="#{tableBean.sectoresList}"
+                <ace:dataTable id="jrvTable"
+                               value="#{jrvBean.jrvList}"
                                var="item"
                                paginator="true"
                                paginatorPosition="bottom"
                                rows="10">
-                    <ace:column id="id" headerText="ID" sortBy="#{item.sectoreelectoral}"
-                                 filterBy="#{item.sectoreelectoral}" filterMatchMode="contains">
-                         <h:outputText id="idCell" value="#{item.sectoreelectoral}"/>
+                    <ace:column id="id" headerText="Jrv" sortBy="#{item.jrv}"
+                                 filterBy="#{item.jrv}" filterMatchMode="contains">
+                         <h:outputText id="idCell" value="#{item.jrv}"/>
                      </ace:column>
-                    <ace:column id="name" headerText="Name" sortBy="#{item.centrodevotacion}"
-                                 filterBy="#{item.centrodevotacion}" filterMatchMode="contains">
-                         <h:outputText id="nameCell" value="#{item.centrodevotacion}"/>
-                    </ace:column>
                     <ace:column>  
                         <f:facet name="header">  
-                            <h:outputText value="Ver JRV" />  
+                            <h:outputText value="" />  
                         </f:facet>  
-                        <h:link outcome="verJrvs" value="Ir" >
-                           <f:param name="id" value="#{item.idsectorelectoral}" />
+                        <h:link outcome="verSectores" value="Ir" >
+                            <f:param name="id" value="#{item.idjrv}" />
                         </h:link>  
                     </ace:column>  
                  </ace:dataTable>

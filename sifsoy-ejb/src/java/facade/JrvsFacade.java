@@ -5,9 +5,12 @@
 package facade;
 
 import entities.Jrvs;
+import entities.Sectoreselectorales;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -27,4 +30,14 @@ public class JrvsFacade extends AbstractFacade<Jrvs> {
         super(Jrvs.class);
     }
     
+    /**
+     *
+     * @param idsector
+     * @return
+     */
+    public List<Jrvs> getJrvsBySector(Sectoreselectorales sector)
+    {
+        TypedQuery<Jrvs> query = em.createNamedQuery("Jrvs.findByIdSector", Jrvs.class).setParameter("idsectorelectoral", sector);
+        return query.getResultList();
+    }
 }

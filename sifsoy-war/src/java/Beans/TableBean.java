@@ -31,13 +31,7 @@ public class TableBean {
     }
     
     public List<Sectoreselectorales> getSectoresList()
-    {
-        /*List<Sectoreselectorales> listado;
-        
-        listado = sectoreselectoralesFacade.getSectoresList();
-        
-        return listado;*/
-        
+    { 
         sectoresList = sectoreselectoralesFacade.getSectoresList();
         return sectoresList;
     }
